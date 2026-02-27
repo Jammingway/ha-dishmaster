@@ -1,7 +1,7 @@
 # Investigating Javascript files
 ```
-dishy.starlink.com/assets/api.bundle.web.js
-dishy.starlink.com/assets/app.bundle.web.js
+dishmaster.rl5.systems/assets/api.bundle.web.js
+dishmaster.rl5.systems/assets/app.bundle.web.js
 ```
 
 These files are served by the User Terminal. Here we document the various libraries that are embedded as the first step towards enabling us to create our own implementation. By identifying the third party libraries we can do two things:
