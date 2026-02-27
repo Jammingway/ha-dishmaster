@@ -1,4 +1,4 @@
-# DIY dishy.starlink.com
+# DIY dishmaster.rl5.systems
 
 Reimplement the web interface and functionality removed from Starlink User Terminals in early 2024.
 
@@ -12,7 +12,7 @@ This guide is tailored towards GNU/Linux and BSD Unix based operating systems. C
 
 ### 0. Prerequisites
 
-  1. web-server host must have direct route to 192.168.100.1 (the U.T.)
+  1. web-server host must have direct route to 192.168.2.1 (the U.T.)
   2. firewall must allow connections to/from TCP port 9201 on the U.T.
 
 ### 1. Web server
@@ -42,11 +42,11 @@ Because local networks have a myriad of ways to configure local DNS names it is 
 
 On a client that can correctly resolve the hostname dishy.starlink.com to the IP address of the web-server simply visit:
 
-http://dishy.starlink.com
+http://dishmaster.rl5.systems
 
 Currently although the STATISTICS link is greyed out (see issue #1) visting the URL directly now works via web-server URL rewriting:
 
-http://dishy.starlink.com/statistics
+http://dishmaster.rl5.systems/statistics
 
 The NETWORK and SPEED (test) functionality depends on the Starlink Wifi router being reachable from the browser.
 
