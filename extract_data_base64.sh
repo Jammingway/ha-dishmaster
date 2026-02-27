@@ -6,11 +6,11 @@
 TMP="${TMP:-/tmp/}"
 
 # identify line numbers 
-grep -Eon 'data:[^,(<. ]*base64' dishy.starlink.com/assets/app.bundle.web.2023_mod.js | while IFS=: read -r line d dt; do
+grep -Eon 'data:[^,(<. ]*base64' dishmaster.rl5.systems/assets/app.bundle.web.2023_mod.js | while IFS=: read -r line d dt; do
  echo "$line $dt"
  dt="${dt%;*}"
  # extract each line containing data:base64 blocks
- sed -n "$line,$line p" dishy.starlink.com/assets/app.bundle.web.2023_mod.js > "${TMP}line_${line}_${dt//\//_}.base64"
+ sed -n "$line,$line p" dishmaster.rl5.systems/assets/app.bundle.web.2023_mod.js > "${TMP}line_${line}_${dt//\//_}.base64"
 done
 
 for b in "${TMP}"line*.base64; do
